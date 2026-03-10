@@ -21,3 +21,12 @@ pacstall-themes-install
 ##
 
 #pacstall-packages-install
+
+
+
+
+##
+## ## gnome-shell-extension
+##
+
+desktop-environment-gnome-shell-extensions-install

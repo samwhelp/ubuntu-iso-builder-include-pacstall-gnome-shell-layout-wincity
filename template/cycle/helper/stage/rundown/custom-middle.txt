@@ -39,3 +39,12 @@ tool-text-editor-sublime-text-install
 ##
 
 admin-package-manager-pacstall-install
+
+
+
+
+##
+## ## gnome-shell-extension
+##
+
+desktop-environment-gnome-shell-extensions-cli
