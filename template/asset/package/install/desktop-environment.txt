@@ -21,7 +21,7 @@ gnome-settings-daemon
 gnome-tweaks
 
 
-pipx
+gir1.2-gmenu-3.0
 gnome-shell-extension-manager
 gnome-menus
 #gnome-shell-extensions

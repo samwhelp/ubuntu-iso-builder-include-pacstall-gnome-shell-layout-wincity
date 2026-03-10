@@ -11,9 +11,9 @@ if [ "${IS_DEBUG}" = "true" ]; then
 fi
 
 
-opt_gnome_shell_extensions_install=$(core_args_load "${base_dir_path}/args/gnome_shell_extensions_install.txt")
-opt_gnome_shell_extensions_enabled=$(core_args_load "${base_dir_path}/args/gnome_shell_extensions_enabled.txt")
-opt_gnome_shell_extensions_disabled=$(core_args_load "${base_dir_path}/args/gnome_shell_extensions_disabled.txt")
+opt_gnome_shell_extensions_install=$(core_args_load "${REF_BASE_DIR_PATH}/args/gnome_shell_extensions_install.txt")
+opt_gnome_shell_extensions_enabled=$(core_args_load "${REF_BASE_DIR_PATH}/args/gnome_shell_extensions_enabled.txt")
+opt_gnome_shell_extensions_disabled=$(core_args_load "${REF_BASE_DIR_PATH}/args/gnome_shell_extensions_disabled.txt")
 
 
 

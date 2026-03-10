@@ -1,51 +1,131 @@
 #!/usr/bin/env bash
 
 
-## path
-base_dir_path="$(dirname "$(realpath "${0}")")"
-plan_dir_path="$(realpath "${base_dir_path}/../..")"
+################################################################################
+### Head: Note
+##
+
+##
+## ## Link
+##
+## * https://github.com/samwhelp/skel-project-plan/blob/master/develop/sh/project-helper/basic/helper/bin/prepare.sh
+##
+
+##
+### Tail: Note
+################################################################################
 
 
-## init
-. "${plan_dir_path}/lib/init.sh"
+################################################################################
+### Head: Bash
+##
+
+set -e						## exit on error
+set -o pipefail				## exit on pipeline error
+set -u						## treat unset variable as error
+
+##
+### Tail: Bash
+################################################################################
 
 
-## args
-. "${plan_dir_path}/lib/args.sh"
+################################################################################
+### Head: Init
+##
+
+REF_CMD_FILE_NAME="$(basename "${0}")"
+REF_BASE_DIR_PATH="$(cd -- "$(dirname -- "${0}")" ; pwd)"
+REF_INIT_DIR_PATH="${REF_BASE_DIR_PATH}/../../../ext"
+. "${REF_INIT_DIR_PATH}/init.sh"
+
+##
+### Tail: Init
+################################################################################
 
 
-## check for root permissions.
-check_root_user_required
+################################################################################
+### Head: Model / mod_module_gext_install
+##
+
+sys_pipx_install () {
 
 
-## sub
-. "${base_dir_path}/sub/init.sh"
+	util_error_echo
+	util_error_echo sudo apt-get install pipx
+	util_error_echo
+	sudo apt-get install pipx
 
 
-## info
-echo "run: ${0}"
+	return 0
+}
+
+sys_gext_install () {
 
 
-## mod
-mod_gnome_shell_extensions_cli_install () {
+	util_error_echo
+	util_error_echo pipx install gnome-extensions-cli --global
+	util_error_echo
+	pipx install gnome-extensions-cli --global
 
-	echo
-	echo "##"
-	echo "## ## 'gnome-extensions-cli' Installing ..."
-	echo "##"
-	echo
 
-	sub_gnome_shell_extensions_cli_install
+	return 0
+}
+
+mod_module_gext_install () {
+
+
+	sys_pipx_install
+
+	sys_gext_install
+
+
+	return 0
+}
+
+##
+### Tail: Model / mod_module_gext_install
+################################################################################
+
+
+################################################################################
+### Head: Portal / portal_install
+##
+
+portal_install () {
+
+	util_error_echo
+	util_error_echo "##"
+	util_error_echo "## ## Run Module"
+	util_error_echo "##"
+	util_error_echo
+
+	local script_file_path="${REF_BASE_DIR_PATH}/${REF_CMD_FILE_NAME}"
+
+	util_error_echo "[Run Module]: ${script_file_path}"
+
+
+	mod_module_gext_install
+
 
 }
 
+##
+### Tail: Portal / portal_install
+################################################################################
 
 
-## main
+################################################################################
+### Head: Main
+##
+
 __main__ () {
 
-	mod_gnome_shell_extensions_cli_install
+	portal_install "${@}"
 
 }
 
-__main__
+__main__ "${@}"
+
+##
+### Tail: Main
+################################################################################

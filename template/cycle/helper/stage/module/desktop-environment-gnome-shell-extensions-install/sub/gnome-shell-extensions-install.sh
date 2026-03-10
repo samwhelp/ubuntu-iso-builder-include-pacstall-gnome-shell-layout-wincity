@@ -128,7 +128,7 @@ sys_gnome_shell_extensions_each_dconf_load_config () {
 
 	local the_extension_id="${1}"
 
-	local the_config_file_path="${base_dir_path}/asset/config/${the_extension_id}/dconf-db/gnome-shell-extension-${the_extension_id}.conf"
+	local the_config_file_path="${REF_BASE_DIR_PATH}/asset/config/${the_extension_id}/dconf-db/gnome-shell-extension-${the_extension_id}.conf"
 
 	if ! [ -e "${the_config_file_path}" ]; then
 		return

@@ -1,33 +1,65 @@
 #!/usr/bin/env bash
 
 
-## path
-base_dir_path="$(dirname "$(realpath "${0}")")"
-plan_dir_path="$(realpath "${base_dir_path}/../..")"
+################################################################################
+### Head: Note
+##
+
+##
+## ## Link
+##
+## * https://github.com/samwhelp/skel-project-plan/blob/master/develop/sh/project-helper/basic/helper/bin/prepare.sh
+##
+
+##
+### Tail: Note
+################################################################################
 
 
-## init
-. "${plan_dir_path}/lib/init.sh"
+################################################################################
+### Head: Bash
+##
+
+set -e						## exit on error
+set -o pipefail				## exit on pipeline error
+set -u						## treat unset variable as error
+
+##
+### Tail: Bash
+################################################################################
 
 
-## args
-. "${plan_dir_path}/lib/args.sh"
+################################################################################
+### Head: Init
+##
+
+REF_CMD_FILE_NAME="$(basename "${0}")"
+REF_BASE_DIR_PATH="$(cd -- "$(dirname -- "${0}")" ; pwd)"
+REF_INIT_DIR_PATH="${REF_BASE_DIR_PATH}/../../../ext"
+. "${REF_INIT_DIR_PATH}/init.sh"
+
+##
+### Tail: Init
+################################################################################
 
 
-## check for root permissions.
-#check_root_user_required
+################################################################################
+### Head: Sub
+##
+
+. "${REF_BASE_DIR_PATH}/sub/init.sh"
+
+##
+### Tail: Sub
+################################################################################
 
 
-## sub
-. "${base_dir_path}/sub/init.sh"
+################################################################################
+### Head: Model / mod_module_extension_install
+##
 
+mod_module_extension_install () {
 
-## info
-echo "run: ${0}"
-
-
-## mod
-mod_gnome_shell_extensions_all_install () {
 
 	echo
 	echo "##"
@@ -35,17 +67,57 @@ mod_gnome_shell_extensions_all_install () {
 	echo "##"
 	echo
 
+
 	sub_gnome_shell_extensions_all_install
 
+
+	return 0
 }
 
+##
+### Tail: Model / mod_module_extension_install
+################################################################################
 
 
-## main
+################################################################################
+### Head: Portal / portal_install
+##
+
+portal_install () {
+
+	util_error_echo
+	util_error_echo "##"
+	util_error_echo "## ## Run Module"
+	util_error_echo "##"
+	util_error_echo
+
+	local script_file_path="${REF_BASE_DIR_PATH}/${REF_CMD_FILE_NAME}"
+
+	util_error_echo "[Run Module]: ${script_file_path}"
+
+
+	mod_module_extension_install
+
+
+}
+
+##
+### Tail: Portal / portal_install
+################################################################################
+
+
+################################################################################
+### Head: Main
+##
+
 __main__ () {
 
-	mod_gnome_shell_extensions_all_install
+	portal_install "${@}"
 
 }
 
-__main__
+__main__ "${@}"
+
+##
+### Tail: Main
+################################################################################
