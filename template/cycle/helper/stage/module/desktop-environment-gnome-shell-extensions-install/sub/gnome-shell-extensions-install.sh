@@ -115,11 +115,11 @@ sys_gnome_shell_extensions_each_copy_to_skel_dir () {
 	local des_extension_dir_path="${des_extensions_root_dir_path}/${the_extension_id}"
 
 	mkdir -p "${src_extension_dir_path}"
-	sudo mkdir -p "${des_extension_dir_path}"
+	mkdir -p "${des_extension_dir_path}"
 
 	echo
-	echo sudo cp -rfT "${src_extension_dir_path}" "${des_extension_dir_path}"
-	sudo cp -rfT "${src_extension_dir_path}" "${des_extension_dir_path}"
+	echo cp -rfT "${src_extension_dir_path}" "${des_extension_dir_path}"
+	cp -rfT "${src_extension_dir_path}" "${des_extension_dir_path}"
 	echo
 
 }

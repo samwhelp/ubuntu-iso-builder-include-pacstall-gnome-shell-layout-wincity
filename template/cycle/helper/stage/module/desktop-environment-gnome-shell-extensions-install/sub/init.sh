@@ -1,5 +1,10 @@
 
 
+## sub / core
+. "${REF_BASE_DIR_PATH}/sub/core.sh"
+
+
+
 ## sub / args
 . "${REF_BASE_DIR_PATH}/sub/args.sh"
 
