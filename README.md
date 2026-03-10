@@ -116,3 +116,10 @@ make build
 | [Ubuntu / Gnome Shell / Note](https://samwhelp.github.io/note-about-ubuntu-gnome-shell/) | [GitHub](https://github.com/samwhelp/note-about-ubuntu-gnome-shell) |
 | [Ubuntu / Adjustment](https://samwhelp.github.io/ubuntu-adjustment/) | [GitHub](https://github.com/samwhelp/ubuntu-adjustment) |
 | [Ubuntu / Note](https://samwhelp.github.io/note-about-ubuntu/) | [GitHub](https://github.com/samwhelp/note-about-ubuntu) |
+
+
+
+
+## Samwhelp
+
+* [GitHub](https://github.com/samwhelp)
