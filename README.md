@@ -7,13 +7,15 @@
 
 ## Home
 
-| Link | GitHub |
-| ---- | ------ |
-| [ubuntu-iso-builder-template](https://samwhelp.github.io/ubuntu-iso-builder-template/) | [GitHub](https://github.com/samwhelp/ubuntu-iso-builder-template) |
-| `+` | `+` |
-| [ubuntu-iso-builder-import-pacstall-gnome-shell-attach-themes](https://samwhelp.github.io/ubuntu-iso-builder-import-pacstall-gnome-shell-attach-themes/) | [GitHub](https://github.com/samwhelp/ubuntu-iso-builder-import-pacstall-gnome-shell-attach-themes) |
-| `=` | `=` |
-| [ubuntu-iso-builder-include-pacstall-gnome-shell-layout-wincity](https://samwhelp.github.io/ubuntu-iso-builder-include-pacstall-gnome-shell-layout-wincity/) | [GitHub](https://github.com/samwhelp/ubuntu-iso-builder-include-pacstall-gnome-shell-layout-wincity) |
+> [ubuntu-iso-builder-include-pacstall-gnome-shell-layout-wincity](https://samwhelp.github.io/ubuntu-iso-builder-include-pacstall-gnome-shell-layout-wincity/)
+
+| Project |
+| ------- |
+| [ubuntu-iso-builder-template](https://github.com/samwhelp/ubuntu-iso-builder-template) |
+| `+` |
+| [ubuntu-iso-builder-import-pacstall-gnome-shell-layout-wincity](https://github.com/samwhelp/ubuntu-iso-builder-import-pacstall-gnome-shell-layout-wincity) |
+| `=` |
+| [ubuntu-iso-builder-include-pacstall-gnome-shell-layout-wincity](https://github.com/samwhelp/ubuntu-iso-builder-include-pacstall-gnome-shell-layout-wincity) |
 
 
 
