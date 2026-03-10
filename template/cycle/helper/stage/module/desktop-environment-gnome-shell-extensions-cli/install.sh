@@ -51,9 +51,9 @@ sys_pipx_install () {
 
 
 	util_error_echo
-	util_error_echo sudo apt-get install pipx
+	util_error_echo apt-get install -y pipx
 	util_error_echo
-	sudo apt-get install pipx
+	apt-get install -y pipx
 
 
 	return 0
