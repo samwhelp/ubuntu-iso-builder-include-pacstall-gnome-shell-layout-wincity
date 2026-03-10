@@ -32,6 +32,10 @@ nautilus
 #nautilus-extension-gnome-terminal
 
 
+thunar
+xfce4-terminal
+
+
 nemo
 
 
