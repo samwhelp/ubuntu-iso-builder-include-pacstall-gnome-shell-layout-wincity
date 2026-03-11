@@ -63,7 +63,7 @@ exec='xfce4-terminal'
 exec-arg=''
 
 
-[org.gnome.desktop.default-applications.terminal:Budgie]
+[org.gnome.desktop.default-applications.terminal]
 exec='xfce4-terminal'
 exec-arg=''
 
